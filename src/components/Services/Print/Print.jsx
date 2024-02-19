@@ -28,7 +28,7 @@ const Print = () => {
                     asset->{url}
                   }
               }`
-        ).then((data) => { setDataPrint(data); console.log(data) })
+        ).then((data) => { setDataPrint(data)})
             .catch(error => console.error("Erreur lors de la récupération des données", error));
 
         defineCliConfig.fetch(
@@ -41,7 +41,7 @@ const Print = () => {
                 supportproj,
                 formatproj,
               }`
-        ).then((data) => { setAccordeonProjets(data); console.log(data) })
+        ).then((data) => { setAccordeonProjets(data)})
             .catch(error => console.error("Erreur lors de la récupération des données", error));
 
     }, [])

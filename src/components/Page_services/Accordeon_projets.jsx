@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 
 const Accordeon_projets = ({ thumbnail_proj, alt, rubriques, formats, supports}) => {
-    useEffect(() => {
-        console.log("tsttt", rubriques, formats)
-    }, [rubriques, formats, supports])
 
     return (
         <div className="container containerImgAccor">
