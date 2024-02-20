@@ -14,7 +14,6 @@ import Res_ref from './components/Services/Res_ref/Res_ref'
 import Goodies from './components/Services/Goodies/Goodies'
 import Archiv_projets from './components/Archiv_projets/Archiv_projets';
 
-
 const App = () => {
     return (
         <div className='App'>
