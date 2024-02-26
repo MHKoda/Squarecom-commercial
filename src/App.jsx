@@ -8,7 +8,7 @@ import Motion from './components/Services/Motion/Motion'
 import Print from './components/Services/Print/Print'
 import IdVisu from './components/Services/IdVisu/IdVisu'
 import Dev from './components/Services/Dev/dev'
-import Vis_immer from './components/Services/Vis_immer/Vis_immer'
+import VisImmer from './components/Services/VisImmer/VisImmer'
 import Marq_pub from './components/Services/Marq_pub/Marq_pub'
 import Res_ref from './components/Services/Res_ref/Res_ref'
 import Goodies from './components/Services/Goodies/Goodies'
@@ -24,7 +24,7 @@ const App = () => {
                 <Route path='/print' element={<Print />}/>
                 <Route path='/identite-visuelle' element={<IdVisu />}/>
                 <Route path='/dev-web-logiciel' element={<Dev />}/>
-                <Route path='/visite-immersive' element={<Vis_immer />}/>
+                <Route path='/visite-immersive' element={<VisImmer />}/>
                 <Route path='/motion' element={<Motion />}/>
                 <Route path='/marquage-publicitaire' element={<Marq_pub />}/>
                 <Route path='/reseaux-referencement' element={<Res_ref />}/>
