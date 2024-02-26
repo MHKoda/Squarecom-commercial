@@ -19,14 +19,15 @@ const ModalContent = ({ closeModal }) => {
             .catch(error => console.error("Erreur lors de la récupération des données", error))
     }, [])
 
-    function handleKeyPress {
-        if (Vignettes.key === 'Escape') {
+    function handleKeyDown(event) {
+        if (event.key === 'Escape') {
             closeModal()
+            console.log('test')
         }
     }
 
     return (
-        <div className="modal-proj overlay" onClick={closeModal} onKeyDown={handleKeyPress}>
+        <div className="modal-proj overlay" onClick={closeModal} onKeyDown={handleKeyDown} tabIndex={0}>
             <div className='bandeau-top'>
                 <h1 className='h1-modale'>INFORMATIONS COMPL&#201;MENTAIRES</h1>
                 <button className="close-modal">X</button>
