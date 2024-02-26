@@ -65,7 +65,8 @@ const Print = () => {
                 supports={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.supportproj)}
             />
             }
-            {/*
+            {/* Code de base d'accordeonProjets
+
             {accordeonProjets.map((projet, index) => (
             
                 < Accordeon_projets

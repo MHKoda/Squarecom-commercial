@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const Accordeon_projets = ({ thumbnail_proj, alt, rubriques, formats, supports}) => {
 
@@ -30,7 +30,7 @@ const Accordeon_projets = ({ thumbnail_proj, alt, rubriques, formats, supports})
                             <ul>
                                 <li>
                                     <p ><strong>Formats :</strong>{formats[index]}</p>
-                                    </li>
+                                </li>
                                 <li>
                                     <p><strong>Supports :</strong>{supports[index]}</p>
                                 </li>
