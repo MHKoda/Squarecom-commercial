@@ -56,7 +56,7 @@ const Header = () => {
 
         <header>
             <div className="container containerHeader">
-            <div id='logo' style={{padding: 0}} onClick={handleHomeClick} onKeyDown={handleKeyDown} role="button">
+            <div id='logo' style={{padding: 0}} tabIndex={0} onClick={handleHomeClick} onKeyDown={handleKeyDown} role="button">
                     <img src="/src/medias/logo_sc_h-300x71-1.png" alt="logo" />
             </div>
             <nav id="menuHeader">
