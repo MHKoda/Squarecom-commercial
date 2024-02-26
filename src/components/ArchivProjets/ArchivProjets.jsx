@@ -1,6 +1,6 @@
 import React from "react";
 
-const Archiv_projets = () => {
+const ArchivProjets = () => {
     return (
         <div className="container" style={{display: 'flex', alignItems: "center", flexDirection: 'column'}}>
             <h1 style={{marginBottom: '50px', marginTop: '30px'}}>Listes des projets</h1>
@@ -18,4 +18,4 @@ const Archiv_projets = () => {
     )
 }
 
-export default Archiv_projets
+export default ArchivProjets

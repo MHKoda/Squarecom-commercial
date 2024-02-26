@@ -12,7 +12,7 @@ import Vis_immer from './components/Services/Vis_immer/Vis_immer'
 import Marq_pub from './components/Services/Marq_pub/Marq_pub'
 import Res_ref from './components/Services/Res_ref/Res_ref'
 import Goodies from './components/Services/Goodies/Goodies'
-import Archiv_projets from './components/Archiv_projets/Archiv_projets';
+import ArchivProjets from './components/ArchivProjets/ArchivProjets';
 
 const App = () => {
     return (
@@ -20,7 +20,7 @@ const App = () => {
             <Header/>
             <Routes>
                 <Route path='/' element={<Homepage />}/>
-                <Route path='/archive-projets' element={<Archiv_projets/>}/>
+                <Route path='/archive-projets' element={<ArchivProjets/>}/>
                 <Route path='/print' element={<Print />}/>
                 <Route path='/identite-visuelle' element={<IdVisu />}/>
                 <Route path='/dev-web-logiciel' element={<Dev />}/>
