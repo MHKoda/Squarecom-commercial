@@ -7,7 +7,7 @@ import Affich_proj from "../../Page_services/Affich_proj"
 import Bouton_decouvr from "../../Page_services/Bouton_decouvr"
 import Vignettes from "../../Various/Vignettes";
 
-const Marq_pub = () => {
+const MarqPub = () => {
     const [loader, setLoader] = useState(false)
 
     useEffect(() => {
@@ -34,4 +34,4 @@ const Marq_pub = () => {
     )
 }
 
-export default Marq_pub
+export default MarqPub
