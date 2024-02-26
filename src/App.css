@@ -2,9 +2,11 @@
   min-width: 100vw;
 }
 
-/*  */
-/* Header */
-/*  */
+/* 
+*
+* header
+*
+*/
 
 header {
   padding: 20px 0 20px 0;
@@ -52,11 +54,9 @@ header {
   color: #F1592A;
 }
 
-/*  */
 
 /* Vignettes des services - Page d'accueil */
 
-/*  */
 
 .containerVignettes {
   margin: 50px auto;
@@ -78,11 +78,9 @@ header {
   box-shadow: 3px 3px 10px 2px rgba(0,0,0,0.2);
 }
 
-/*  */
 
 /* Vignettes des services - Pages Services */
 
-/*  */
 
 .containerVignettes2 {
   display: flex;
@@ -107,11 +105,9 @@ header {
   max-width: 100px;
 }
 
-/*  */
 
 /* Bookmark/repère de page */
 
-/*  */
 
 #gauche_relatif {
   display: flex;
@@ -159,11 +155,9 @@ h2 {
   display: none;
 }
 
-/*  */
 
 /* Footer */
 
-/*  */
 
 footer {
   display: flex;
@@ -177,11 +171,9 @@ strong {
   font-weight: 700;
 }
 
-/*  */
 
 /* Présentation du service - Pages Service */
 
-/*  */
 
 .description {
   margin-top: 75px;
@@ -217,9 +209,7 @@ strong {
   z-index: 0;
 }
 
-/*  */
 /* Accordeon de présentation des projets - Pages Service */
-/*  */
 
 ul{
   padding: 0;
@@ -337,9 +327,7 @@ input[type="radio"]{
   bottom: 45px;
 }
 
-/*  */
 /* Listes des projets supplémentaires */
-/*  */
 
 .containerArticle {
   margin-top: 100px;
@@ -391,9 +379,7 @@ input[type="radio"]{
   color: white;
 }
 
-/*  */
 /* Le CSS des modales */
-/*  */
 
 .active-modale {
   overflow-y: hidden;
@@ -494,11 +480,9 @@ input[type="radio"]{
   font-size: 20px;
 }
 
-/*  */
 
 /* Bouton tout découvrir */
 
-/*  */
 
 .containerBouton {
   margin-top: 30px;
@@ -520,11 +504,9 @@ input[type="radio"]{
   background-color: #19161A;
 }
 
-/*  */
 
 /* Media-queries - Responsive */
 
-/*  */
 
 @media screen and (max-width: 1160px) {
   .containerVignettes ul {
