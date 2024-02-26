@@ -65,21 +65,6 @@ const Print = () => {
                 supports={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.supportproj)}
             />
             }
-            {/* Code de base d'accordeonProjets
-
-            {accordeonProjets.map((projet, index) => (
-            
-                < Accordeon_projets
-                    thumbnail_proj={`${accordeonProjets[0] !== undefined ? accordeonProjets[0].imageproj.asset.url : ''}`}
-                    alt={(accordeonProjets[0] !== undefined) ? (accordeonProjets[0].altimage) : ('')}
-                    rubrique1={(accordeonProjets[0] !== undefined) ? (accordeonProjets[0].rubriquesprint) : ('')}
-                    rubrique2={(accordeonProjets[1] !== undefined) ? (accordeonProjets[1].rubriquesprint) : ('')}
-                    rubrique3={(accordeonProjets[2] !== undefined) ? (accordeonProjets[2].rubriquesprint) : ('')}
-                    rubrique4={(accordeonProjets[3] !== undefined) ? (accordeonProjets[3].rubriquesprint) : ('')}
-                />
-                ))
-            } 
-            */}
             <Affich_proj />
             <Bouton_decouvr />
             <Vignettes />
