@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Presentation from "../../Page_services/Presentation";
-import Arbo_gauche from "../../Various/Arbo_gauche";
-import Test1 from "/src/medias/picto-print.png"
+import React, { useEffect, useState } from "react"
+import Presentation from "../../Page_services/Presentation"
+import Arbo_gauche from "../../Various/Arbo_gauche"
+import Test1 from "../../../medias/picto-print.png"
 import Accordeon_projets from "../../Page_services/Accordeon_projets"
 import Affich_proj from "../../Page_services/Affich_proj"
 import Bouton_decouvr from "../../Page_services/Bouton_decouvr"
-import Vignettes from "../../Various/Vignettes";
+import Vignettes from "../../Various/Vignettes"
 
 const Dev = () => {
     const [loader, setLoader] = useState(false)
