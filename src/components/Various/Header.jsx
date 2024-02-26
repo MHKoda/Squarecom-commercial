@@ -12,15 +12,15 @@ const Header = () => {
         navigate('/archive-projets')
     }
 
-    var urlActuelle = window.location.href;
-    var orange = null;
+    let urlActuelle = window.location.href;
+    let orange = null;
     
     if(urlActuelle === "http://localhost:5173/") {
         orange = document.getElementById('accueil');
         if (orange) {
             orange.classList.add('orange');
         }
-        var orange_realisations = document.getElementById('realisations');
+        let orange_realisations = document.getElementById('realisations');
         if (orange_realisations) {
             orange_realisations.classList.remove('orange');
         }
@@ -29,16 +29,16 @@ const Header = () => {
         if (orange) {
             orange.classList.add('orange');
         }
-        var orange_accueil = document.getElementById('accueil');
+        let orange_accueil = document.getElementById('accueil');
         if (orange_accueil) {
             orange_accueil.classList.remove('orange');
         }
     } else {
-        var orange_accueil = document.getElementById('accueil');
+        let orange_accueil = document.getElementById('accueil');
         if (orange_accueil) {
             orange_accueil.classList.remove('orange');
         }
-        var orange_realisations = document.getElementById('realisations');
+        let orange_realisations = document.getElementById('realisations');
         if (orange_realisations) {
             orange_realisations.classList.remove('orange');
         }
