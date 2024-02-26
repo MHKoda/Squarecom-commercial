@@ -7,7 +7,7 @@ import Affich_proj from "../../Page_services/Affich_proj"
 import Bouton_decouvr from "../../Page_services/Bouton_decouvr"
 import Vignettes from "../../Various/Vignettes";
 
-const Id_visu = () => {
+const IdVisu = () => {
     const [loader, setLoader] = useState(false)
 
     useEffect(() => {
@@ -34,4 +34,4 @@ const Id_visu = () => {
     )
 }
 
-export default Id_visu
+export default IdVisu
