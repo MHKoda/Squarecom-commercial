@@ -23,7 +23,6 @@ header {
 
 #menuHeader {
   font-family: 'Roboto', sans-serif;
-  color: #949494;
 }
 
 #menuHeader ul {
@@ -35,13 +34,11 @@ header {
   gap: 40px;
 }
 
-#menuHeader ul li a {
+#accueil, #realisations {
   text-decoration: none;
-  color: #949494;
-}
-
-#menuHeader ul li a:hover {
-  color: #F1592A;
+  color: grey;
+  background-color: unset;
+  border: unset;
 }
 
 #icons {
@@ -50,8 +47,8 @@ header {
 }
 
 .orange {
-  border-bottom: #F1592A 2px solid;
-  color: #F1592A;
+  border-bottom: #F1592A 2px solid !important;
+  color: #F1592A !important;
 }
 
 

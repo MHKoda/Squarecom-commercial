@@ -61,8 +61,12 @@ const Header = () => {
                 </div>
                 <nav id="menuHeader">
                     <ul>
-                        <li id='accueil' onClick={handleHomeClick} onKeyDown={handleKeyDown}>Accueil</li>
-                        <li id='realisations' onClick={handleRealClick} onKeyDown={handleKeyDown}>Réalisations</li>
+                        <li>
+                            <button id='accueil' className='orange' onClick={handleHomeClick} onKeyDown={handleKeyDown} tabIndex={0}>Accueil</button>
+                        </li>
+                        <li>
+                            <button id='realisations' onClick={handleRealClick} onKeyDown={handleKeyDown} tabIndex={0}>Réalisations</button>
+                        </li>
                     </ul>
                     <div id="icons"></div>
                 </nav>
