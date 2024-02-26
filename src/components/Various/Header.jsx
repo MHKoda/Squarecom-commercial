@@ -20,8 +20,8 @@ const Header = () => {
 
     let urlActuelle = window.location.href;
     let orange = null;
-    
-    if(urlActuelle === "http://localhost:5173/") {
+
+    if (urlActuelle === "http://localhost:5173/") {
         orange = document.getElementById('accueil');
         if (orange) {
             orange.classList.add('orange');
@@ -30,7 +30,7 @@ const Header = () => {
         if (orange_realisations) {
             orange_realisations.classList.remove('orange');
         }
-    } else if(urlActuelle === "http://localhost:5173/archive-projets") {
+    } else if (urlActuelle === "http://localhost:5173/archive-projets") {
         orange = document.getElementById('realisations');
         if (orange) {
             orange.classList.add('orange');
@@ -50,22 +50,22 @@ const Header = () => {
         }
         console.log('AMOGUS FOR THE WIN');
     }
-    
+
 
     return (
 
         <header>
             <div className="container containerHeader">
-            <div id='logo' style={{padding: 0}} tabIndex={0} onClick={handleHomeClick} onKeyDown={handleKeyDown} role="button">
-                    <img src="/src/medias/logo_sc_h-300x71-1.png" alt="logo" />
-            </div>
-            <nav id="menuHeader">
-                <ul>
-                    <li id='accueil' onClick={handleHomeClick} onKeyDown={handleKeyDown}>Accueil</li>
-                    <li id='realisations' onClick={handleRealClick} onKeyDown={handleKeyDown}>Réalisations</li>
-                </ul>
-                <div id="icons"></div>
-            </nav>
+                <div id='logo' style={{ padding: 0 }}>
+                    <input type="image" id="logo" src="/src/medias/logo_sc_h-300x71-1.png" alt="logo" style={{ padding: 0 }} onClick={handleHomeClick} onKeyDown={handleKeyDown} />
+                </div>
+                <nav id="menuHeader">
+                    <ul>
+                        <li id='accueil' onClick={handleHomeClick} onKeyDown={handleKeyDown}>Accueil</li>
+                        <li id='realisations' onClick={handleRealClick} onKeyDown={handleKeyDown}>Réalisations</li>
+                    </ul>
+                    <div id="icons"></div>
+                </nav>
             </div>
         </header>
     )
