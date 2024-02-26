@@ -10,7 +10,7 @@ import IdVisu from './components/Services/IdVisu/IdVisu'
 import Dev from './components/Services/Dev/dev'
 import VisImmer from './components/Services/VisImmer/VisImmer'
 import MarqPub from './components/Services/MarqPub/MarqPub'
-import Res_ref from './components/Services/Res_ref/Res_ref'
+import ResRef from './components/Services/ResRef/ResRef'
 import Goodies from './components/Services/Goodies/Goodies'
 import ArchivProjets from './components/ArchivProjets/ArchivProjets';
 
@@ -27,7 +27,7 @@ const App = () => {
                 <Route path='/visite-immersive' element={<VisImmer />}/>
                 <Route path='/motion' element={<Motion />}/>
                 <Route path='/marquage-publicitaire' element={<MarqPub />}/>
-                <Route path='/reseaux-referencement' element={<Res_ref />}/>
+                <Route path='/reseaux-referencement' element={<ResRef />}/>
                 <Route path='/goodies' element={<Goodies />}/>
             </Routes>
             <Footer />

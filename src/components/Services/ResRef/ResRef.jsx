@@ -7,7 +7,7 @@ import Affich_proj from "../../Page_services/Affich_proj"
 import Bouton_decouvr from "../../Page_services/Bouton_decouvr"
 import Vignettes from "../../Various/Vignettes";
 
-const Res_ref = () => {
+const ResRef = () => {
     const [loader, setLoader] = useState(false)
 
     useEffect(() => {
@@ -34,4 +34,4 @@ const Res_ref = () => {
     )
 }
 
-export default Res_ref
+export default ResRef
