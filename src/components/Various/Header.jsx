@@ -8,6 +8,12 @@ const Header = () => {
         navigate('/');
     };
 
+    function handleKeyDown(event) {
+        if (event.key === 'Escape') {
+            handleHomeClick()
+        }
+    }
+
     const handleRealClick = () => {
         navigate('/archive-projets')
     }
@@ -51,12 +57,12 @@ const Header = () => {
         <header>
             <div className="container containerHeader">
             <div id='logo' style={{padding: 0}}>
-                    <img src="/src/medias/logo_sc_h-300x71-1.png" alt="logo" onClick={handleHomeClick}/>
+                    <img src="/src/medias/logo_sc_h-300x71-1.png" alt="logo" onClick={handleHomeClick} onKeyDown={handleKeyDown}/>
             </div>
             <nav id="menuHeader">
                 <ul>
-                    <li id='accueil' onClick={handleHomeClick}>Accueil</li>
-                    <li id='realisations' onClick={handleRealClick}>Réalisations</li>
+                    <li id='accueil' onClick={handleHomeClick} onKeyDown={handleKeyDown}>Accueil</li>
+                    <li id='realisations' onClick={handleRealClick} onKeyDown={handleKeyDown}>Réalisations</li>
                 </ul>
                 <div id="icons"></div>
             </nav>
