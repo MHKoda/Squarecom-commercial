@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import ModalContent from "./ModalContent";
 import { createPortal } from "react-dom";
 
-const Affich_proj = () => {
+const AffichProj = () => {
 
     const [showModal, setShowModal] = useState(false);
 
@@ -33,4 +33,4 @@ const Affich_proj = () => {
     )
 }
 
-export default Affich_proj
+export default AffichProj

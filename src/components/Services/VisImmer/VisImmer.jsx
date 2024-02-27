@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
 import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-print.png"
-import Accordeon_projets from "../../Page_services/Accordeon_projets"
-import Affich_proj from "../../Page_services/Affich_proj"
-import Bouton_decouvr from "../../Page_services/Bouton_decouvr"
+import AccordeonProjets from "../../Page_services/AccordeonProjets"
+import AffichProj from "../../Page_services/AffichProj"
+import BoutonDecouvr from "../../Page_services/BoutonDecouvr"
 import Vignettes from "../../Various/Vignettes";
 
 const VisImmer = () => {
@@ -26,9 +26,9 @@ const VisImmer = () => {
             />
             }
             <ArboGauche title = 'Visite immersive'/>
-            <Accordeon_projets thumbnail_proj='/src/medias/texture-02.jpg' alt='texture hachures orangées' rubrique1='Scan 3D' rubrique2='Mise à disposition' rubrique3='' rubrique4=''/>
-            <Affich_proj />
-            <Bouton_decouvr/>
+            <AccordeonProjets thumbnail_proj='/src/medias/texture-02.jpg' alt='texture hachures orangées' rubrique1='Scan 3D' rubrique2='Mise à disposition' rubrique3='' rubrique4=''/>
+            <AffichProj />
+            <BoutonDecouvr/>
             <Vignettes />
         </div>
     )

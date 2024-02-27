@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Bouton_decouvr = () => {
+const BoutonDecouvr = () => {
     return (
         <div className="container containerBouton">
             <p><Link to={'/archive-projets'}>TOUT DECOUVRIR</Link></p>
@@ -9,4 +9,4 @@ const Bouton_decouvr = () => {
     )
 }
 
-export default Bouton_decouvr
+export default BoutonDecouvr

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Accordeon_projets = ({ thumbnail_proj, alt, rubriques, formats, supports}) => {
+const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports}) => {
 
     return (
         <div className="container containerImgAccor">
@@ -44,4 +44,4 @@ const Accordeon_projets = ({ thumbnail_proj, alt, rubriques, formats, supports})
     )
 }
 
-export default Accordeon_projets
+export default AccordeonProjets

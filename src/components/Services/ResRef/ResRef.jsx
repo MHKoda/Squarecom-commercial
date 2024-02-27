@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
 import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-marquage.png"
-import Accordeon_projets from "../../Page_services/Accordeon_projets"
-import Affich_proj from "../../Page_services/Affich_proj"
-import Bouton_decouvr from "../../Page_services/Bouton_decouvr"
+import AccordeonProjets from "../../Page_services/AccordeonProjets"
+import AffichProj from "../../Page_services/AffichProj"
+import BoutonDecouvr from "../../Page_services/BoutonDecouvr"
 import Vignettes from "../../Various/Vignettes";
 
 const ResRef = () => {
@@ -26,9 +26,9 @@ const ResRef = () => {
             />
             }
             <ArboGauche title = 'Réseaux et référencement'/>
-            <Accordeon_projets thumbnail_proj='/src/medias/gasoft.jpg' alt='site internet de gasoft' rubrique1='Gestion de contenu' rubrique2='Référencement'  rubrique3='' rubrique4=''/>
-            <Affich_proj />
-            <Bouton_decouvr/>
+            <AccordeonProjets thumbnail_proj='/src/medias/gasoft.jpg' alt='site internet de gasoft' rubrique1='Gestion de contenu' rubrique2='Référencement'  rubrique3='' rubrique4=''/>
+            <AffichProj />
+            <BoutonDecouvr/>
             <Vignettes />
         </div>
     )

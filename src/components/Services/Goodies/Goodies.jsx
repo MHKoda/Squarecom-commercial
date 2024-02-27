@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
 import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-marquage.png"
-import Accordeon_projets from "../../Page_services/Accordeon_projets"
-import Affich_proj from "../../Page_services/Affich_proj"
-import Bouton_decouvr from "../../Page_services/Bouton_decouvr"
+import AccordeonProjets from "../../Page_services/AccordeonProjets"
+import AffichProj from "../../Page_services/AffichProj"
+import BoutonDecouvr from "../../Page_services/BoutonDecouvr"
 import Vignettes from "../../Various/Vignettes";
 
 const Goodies = () => {
@@ -26,9 +26,9 @@ const Goodies = () => {
             />
             }
             <ArboGauche title = 'Goodies'/>
-            <Accordeon_projets thumbnail_proj='/src/medias/flyercentresociallescharmilles.jpg' alt='flyer pour le centre social les charmilles' rubrique1='Gourdes' rubrique2='Stickers' rubrique3='Casquettes'  rubrique4=''/>
-            <Affich_proj />
-            <Bouton_decouvr/>
+            <AccordeonProjets thumbnail_proj='/src/medias/flyercentresociallescharmilles.jpg' alt='flyer pour le centre social les charmilles' rubrique1='Gourdes' rubrique2='Stickers' rubrique3='Casquettes'  rubrique4=''/>
+            <AffichProj />
+            <BoutonDecouvr/>
             <Vignettes />
         </div>
     )

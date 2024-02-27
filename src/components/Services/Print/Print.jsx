@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
 import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-print.png"
-import Accordeon_projets from "../../Page_services/Accordeon_projets"
-import Affich_proj from "../../Page_services/Affich_proj"
-import Bouton_decouvr from "../../Page_services/Bouton_decouvr"
+import AccordeonProjets from "../../Page_services/AccordeonProjets"
+import AffichProj from "../../Page_services/AffichProj"
+import BoutonDecouvr from "../../Page_services/BoutonDecouvr"
 import Vignettes from "../../Various/Vignettes";
 import defineCliConfig from "../../../../squarecomcommercial/sanity.cli";
 
@@ -57,7 +57,7 @@ const Print = () => {
             }
             <ArboGauche title={(dataPrint[0] !== undefined) ? (dataPrint[0].nomcat) : ('')} />
             {
-            <Accordeon_projets
+            <AccordeonProjets
                 thumbnail_proj={accordeonProjets[0]?.imageproj?.asset?.url || ''}
                 alt={accordeonProjets[0]?.altimage || ''}
                 rubriques={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.rubriquesprint)}
@@ -65,8 +65,8 @@ const Print = () => {
                 supports={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.supportproj)}
             />
             }
-            <Affich_proj />
-            <Bouton_decouvr />
+            <AffichProj />
+            <BoutonDecouvr />
             <Vignettes />
         </div>
     )
