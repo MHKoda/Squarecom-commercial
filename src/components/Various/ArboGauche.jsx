@@ -10,6 +10,9 @@ const ArboGauche = ({title}) => {
             <div id="image_gauche">
                 <img src="/src/medias/texture_titre.jpg" alt="texture titre" />
             </div>
+            <div>
+                <p>again some test</p>
+            </div>
         </div>
     )
 }
