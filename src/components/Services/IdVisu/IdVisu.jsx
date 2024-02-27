@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
-import Arbo_gauche from "../../Various/Arbo_gauche";
+import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-id.png"
 import Accordeon_projets from "../../Page_services/Accordeon_projets"
 import Affich_proj from "../../Page_services/Affich_proj"
@@ -25,7 +25,7 @@ const IdVisu = () => {
                 service_picto = '/src/medias/picto-id.png'
             />
             }
-            <Arbo_gauche title = 'Identité visuelle'/>
+            <ArboGauche title = 'Identité visuelle'/>
             <Accordeon_projets thumbnail_proj='/src/medias/mlogo-bourduge.jpg' alt='logo christophe bourduge' rubrique1='Logo' rubrique2='Charte graphique' rubrique3='' rubrique4=''/>
             <Affich_proj />
             <Bouton_decouvr/>

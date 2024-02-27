@@ -33,13 +33,6 @@ const ModalContent = ({ closeModal }) => {
                 <button className="close-modal">X</button>
             </div>
             <div className="modale-content">
-                {/* {vignettes.map((vignette, index) => (
-                    <li key={index} className={urlActuelle === `http://localhost:5173${vignette.url}` ? "vignette-hidden" : ""}>
-                        <Link to={vignette.url}>
-                            <img src={vignette.imgSrc} alt={vignette.alt} />
-                        </Link>
-                    </li>
-                ))} */}
                 <div className="thumbnail-proj-modal">
                     <img src='../medias/cardf.jpg' alt='cardf' />
                 </div>
@@ -64,8 +57,6 @@ const ModalContent = ({ closeModal }) => {
                     </ul>
                 </div>
             </div>
-
-            <p>test</p>
         </div>
     )
 }

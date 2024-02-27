@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
-import Arbo_gauche from "../../Various/Arbo_gauche";
+import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-print.png"
 import Accordeon_projets from "../../Page_services/Accordeon_projets"
 import Affich_proj from "../../Page_services/Affich_proj"
@@ -25,7 +25,7 @@ const VisImmer = () => {
                 service_picto = '/src/medias/picto-print.png'
             />
             }
-            <Arbo_gauche title = 'Visite immersive'/>
+            <ArboGauche title = 'Visite immersive'/>
             <Accordeon_projets thumbnail_proj='/src/medias/texture-02.jpg' alt='texture hachures orangées' rubrique1='Scan 3D' rubrique2='Mise à disposition' rubrique3='' rubrique4=''/>
             <Affich_proj />
             <Bouton_decouvr/>

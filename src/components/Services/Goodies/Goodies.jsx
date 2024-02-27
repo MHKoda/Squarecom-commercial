@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
-import Arbo_gauche from "../../Various/Arbo_gauche";
+import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-marquage.png"
 import Accordeon_projets from "../../Page_services/Accordeon_projets"
 import Affich_proj from "../../Page_services/Affich_proj"
@@ -25,7 +25,7 @@ const Goodies = () => {
                 service_picto = '/src/medias/picto-marquage.png'
             />
             }
-            <Arbo_gauche title = 'Goodies'/>
+            <ArboGauche title = 'Goodies'/>
             <Accordeon_projets thumbnail_proj='/src/medias/flyercentresociallescharmilles.jpg' alt='flyer pour le centre social les charmilles' rubrique1='Gourdes' rubrique2='Stickers' rubrique3='Casquettes'  rubrique4=''/>
             <Affich_proj />
             <Bouton_decouvr/>
