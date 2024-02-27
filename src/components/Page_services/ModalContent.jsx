@@ -64,6 +64,8 @@ const ModalContent = ({ closeModal }) => {
                     </ul>
                 </div>
             </div>
+
+            <p>test</p>
         </div>
     )
 }
