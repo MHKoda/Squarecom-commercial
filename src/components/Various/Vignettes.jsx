@@ -73,7 +73,7 @@ if (urlActuelle === "http://localhost:5173/") {
             <div className="container containerVignettes2">
                 <ul>
                     {vignettes.map((vignette, index) => (
-                        <li key={index} className={urlActuelle === `http://localhost:5173${vignette.url}` ? "vignette-hidden" : ""}>
+                        <li key={vignette.id} className={urlActuelle === `http://localhost:5173${vignette.url}` ? "vignette-hidden" : ""}>
                             <Link to={vignette.url}>
                                 <img src={vignette.imgSrc} alt={vignette.alt} />
                             </Link>
