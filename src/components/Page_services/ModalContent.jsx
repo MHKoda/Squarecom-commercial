@@ -27,7 +27,7 @@ const ModalContent = ({ closeModal }) => {
     }
 
     return (
-        <div className="modal-proj overlay" onClick={closeModal} onKeyDown={handleKeyDown} role="button">
+        <div className="modal-proj overlay" onClick={closeModal} onKeyDown={handleKeyDown} role="button" tabIndex="0">
             <input type="text" />
                 <div className='bandeau-top'>
                     <h1 className='h1-modale'>INFORMATIONS COMPL&#201;MENTAIRES</h1>
