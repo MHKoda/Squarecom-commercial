@@ -14,4 +14,4 @@ const ArboGauche = ({title}) => {
     )
 }
 
-export default ArboGauche;
+export default ArboGauche
