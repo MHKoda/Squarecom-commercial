@@ -17,7 +17,7 @@ const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports}) 
             <div className="containerAccordeon">
                 <ul className="accordeon">
                 {rubriques.map((rubrique, index) => (
-                        <li key={index}>
+                        <li key={rubrique.id}>
                         <input type="radio" name="accordeon" id={`first-${index}`} />
                         <label htmlFor={`first-${index}`}>
                             <div>
