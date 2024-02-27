@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Vignettes = () => {
     // Récupérer l'URL actuelle
-    var urlActuelle = window.location.href;
+    let urlActuelle = window.location.href;
 
     // Définir un tableau d'objets représentant chaque vignette avec son lien et son URL associée
     const vignettes = [
