@@ -1,11 +1,11 @@
 import React from "react";
 
-const Arbo_gauche = ({title}) => {
+const ArboGauche = ({title}) => {
     return (
         <div id="gauche_relatif">
             <div id="titre_gauche">
                 <h2>SQUARECOM</h2>
-                <p className="arbo_gauche">| {title}</p>
+                <p className="ArboGauche">| {title}</p>
             </div>
             <div id="image_gauche">
                 <img src="/src/medias/texture_titre.jpg" alt="texture titre" />
@@ -14,4 +14,4 @@ const Arbo_gauche = ({title}) => {
     )
 }
 
-export default Arbo_gauche;
+export default ArboGauche;

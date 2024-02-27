@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
-import Arbo_gauche from "../../Various/Arbo_gauche";
+import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-print.png"
 import Accordeon_projets from "../../Page_services/Accordeon_projets"
 import Affich_proj from "../../Page_services/Affich_proj"
@@ -55,7 +55,7 @@ const Print = () => {
                     service_picto={`${dataPrint[0] !== undefined ? dataPrint[0].pictoservice.asset.url : ''}`}
                 />
             }
-            <Arbo_gauche title={(dataPrint[0] !== undefined) ? (dataPrint[0].nomcat) : ('')} />
+            <ArboGauche title={(dataPrint[0] !== undefined) ? (dataPrint[0].nomcat) : ('')} />
             {
             <Accordeon_projets
                 thumbnail_proj={accordeonProjets[0]?.imageproj?.asset?.url || ''}

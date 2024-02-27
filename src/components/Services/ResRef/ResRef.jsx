@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
-import Arbo_gauche from "../../Various/Arbo_gauche";
+import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-marquage.png"
 import Accordeon_projets from "../../Page_services/Accordeon_projets"
 import Affich_proj from "../../Page_services/Affich_proj"
@@ -25,7 +25,7 @@ const ResRef = () => {
                 service_picto = '/src/medias/picto-marquage.png'
             />
             }
-            <Arbo_gauche title = 'Réseaux et référencement'/>
+            <ArboGauche title = 'Réseaux et référencement'/>
             <Accordeon_projets thumbnail_proj='/src/medias/gasoft.jpg' alt='site internet de gasoft' rubrique1='Gestion de contenu' rubrique2='Référencement'  rubrique3='' rubrique4=''/>
             <Affich_proj />
             <Bouton_decouvr/>

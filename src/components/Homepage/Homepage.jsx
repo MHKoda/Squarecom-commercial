@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Vignettes from "../Various/Vignettes";
-import Arbo_gauche from "../Various/Arbo_gauche";
+import ArboGauche from "../Various/ArboGauche";
 
 const Homepage = () => {
     
     return (
         <div>
             <Vignettes />
-            <Arbo_gauche title="Accueil" />
+            <ArboGauche title="Accueil" />
         </div>
     )
 }

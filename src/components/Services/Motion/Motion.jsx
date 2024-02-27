@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Presentation from "../../Page_services/Presentation";
-import Arbo_gauche from "../../Various/Arbo_gauche";
+import ArboGauche from "../../Various/ArboGauche";
 import Test1 from "../../../medias/picto-referencement.png"
 import Accordeon_projets from "../../Page_services/Accordeon_projets"
 import Affich_proj from "../../Page_services/Affich_proj"
@@ -25,7 +25,7 @@ const Motion = () => {
                 service_picto = '/src/medias/picto-referencement.png'
             />
             }
-            <Arbo_gauche title = 'Motion'/>
+            <ArboGauche title = 'Motion'/>
             <Accordeon_projets thumbnail_proj='/src/medias/affiche-estivale-neufchateau.jpg' alt='Affiche estivale' rubrique1= 'Vidéo promotionnelle' rubrique2='Vidéo institutionnelle' rubrique3='Vidéo explicative' rubrique4=''/>
             <Affich_proj />
             <Bouton_decouvr/>
