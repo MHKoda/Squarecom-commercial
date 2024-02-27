@@ -5,13 +5,10 @@ const ArboGauche = ({title}) => {
         <div id="gauche_relatif">
             <div id="titre_gauche">
                 <h2>SQUARECOM</h2>
-                <p className="ArboGauche">| {title}</p>
+                <p className="arbo_gauche">| {title}</p>
             </div>
             <div id="image_gauche">
                 <img src="/src/medias/texture_titre.jpg" alt="texture titre" />
-            </div>
-            <div>
-                <p>again some test</p>
             </div>
         </div>
     )
