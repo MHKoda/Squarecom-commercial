@@ -1,6 +1,6 @@
 import React from "react";
 
-const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports}) => {
+const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports, change}) => {
 
     return (
         <div className="container containerImgAccor">
@@ -19,7 +19,7 @@ const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports}) 
                 {rubriques.map((rubrique, index) => (
                         <li key={rubrique.id}>
                         <input type="radio" name="accordeon" id={`first-${index}`} />
-                        <label htmlFor={`first-${index}`}>
+                        <label htmlFor={`first-${index}`} onClick={() => change(index)}>
                             <div>
                                 <span className="plus">+</span>
                                 <span> {rubrique}</span>
