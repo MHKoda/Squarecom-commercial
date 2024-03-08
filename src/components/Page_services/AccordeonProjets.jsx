@@ -29,10 +29,10 @@ const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports}) 
                         <div className="content">
                             <ul>
                                 <li>
-                                    <p ><strong>Formats :</strong>{formats[index]}</p>
+                                    <p ><strong>Formats : </strong>{formats[index]}</p>
                                 </li>
                                 <li>
-                                    <p><strong>Supports :</strong>{supports[index]}</p>
+                                    <p><strong>Supports : </strong>{supports[index]}</p>
                                 </li>
                             </ul>
                         </div>
