@@ -65,20 +65,19 @@ const ArchivProjets = () => {
 
     return (
         <div className="container archiv-projet">
-            <h1 id="titre-liste-projets">Listes des projets</h1>
+            <h1 id="titre-liste-projets">Listes des projets :</h1>
             <select value={rubrique} onChange={(e) => setRubrique(e.target.value)}>
                 <option value="">Toutes les rubriques</option>
                 {nomRubriques.map((option, index) => (
                     <option key={index} value={option}>{option}</option>
                 ))}
             </select>
-            <ul>
+            <ul id='liste-archive-projets'>
                 {dataPrint.map((projet, index) => (
                     <li key={`list-${index}`}>
-                        {projet.nomproj}
-                        <img style={{ width: '50px' }} src={projet.imageproj.asset.url} alt={projet.altimage} />
+                        <img src={projet.imageproj.asset.url} alt={projet.altimage} />
                         <button onClick={() => { handleOpenModal(projet); setShowModal(true) }} className="afficher-projet">
-                            <span>Afficher le projet</span>
+                            <span>{projet.nomproj}</span>
                         </button>
                         {showModal && createPortal(<ModalContent data={selectedProjet} closeModal={() => setShowModal(false)} />, document.body)}
                     </li>

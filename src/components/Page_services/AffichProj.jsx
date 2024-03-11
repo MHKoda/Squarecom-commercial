@@ -1,10 +1,12 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ModalContent from "./ModalContent";
 import { createPortal } from "react-dom";
 
 const AffichProj = () => {
 
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false)
+
+    // const [dataPrint, setDataPrint] = useState([])
 
     if(showModal){
         document.body.classList.add('active-modale')
@@ -12,17 +14,34 @@ const AffichProj = () => {
         document.body.classList.remove('active-modale')
     }
 
+    // useEffect(() => {
+    //     let query = `*[_type == 'projet'`;
+
+    //     if (rubrique) {
+    //         query += ` && rubrique->nomrubrique == "${rubrique}"`
+    //     }
+
+    //     query += `] | order(nomproj asc)  {
+    //         nomproj,
+    //         client->{nomclient},
+    //         rubrique->{nomrubrique},
+    //         imageproj {
+    //           asset->{url}
+    //         },
+    //         altimage,
+    //         slugproj{current}
+    //     }`;
+
+    //     defineCliConfig.fetch(query)
+    //         .then((data) => {
+    //             setDataPrint(data);
+    //         })
+    //         .catch(error => console.error("Erreur lors de la récupération des données", error))
+    // }, []);
+
     return (
         <div className="container containerArticle">
             <ul>
-                <li>
-                    <img src="/src/medias/carte-de-visite-tridon-carre.jpg" alt="carte de visite tridon" />
-                    <button onClick={() => setShowModal(true)} className="afficher-projet"><span>Afficher le projet</span></button>
-                </li>
-                <li>
-                    <img src="/src/medias/carte-de-visite-tridon-carre.jpg" alt="carte de visite tridon" />
-                    <button onClick={() => setShowModal(true)} className="afficher-projet"><span>Afficher le projet</span></button>
-                </li>
                 <li>
                     <img src="/src/medias/carte-de-visite-tridon-carre.jpg" alt="carte de visite tridon" />
                     <button onClick={() => setShowModal(true)} className="afficher-projet"><span>Afficher le projet</span></button>

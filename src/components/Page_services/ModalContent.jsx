@@ -18,12 +18,16 @@ const ModalContent = ({ closeModal, data }) => {
                 </div>
                 <div className="modale-content">
                     <div className="thumbnail-proj-modal">
-                        <img src='../medias/cardf.jpg' alt='cardf' />
+                        <img src={data.imageproj.asset.url} alt={data.altimage} />
                     </div>
                     <div className="descriptif-proj">
                         <ul>
-                            <li className='nom-client'>
+                            <li>
                                 <h2 className='titre_desc'>Nom du client :</h2>
+                                <p className='content_desc'>{data.client.nomclient}</p>
+                            </li>
+                            <li>
+                                <h2 className='titre_desc'>Nom du projet :</h2>
                                 <p className='content_desc'>{data.nomproj}</p>
                             </li>
                         </ul>
