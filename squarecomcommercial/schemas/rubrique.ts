@@ -6,8 +6,14 @@ export default defineType({
   type: 'document',
   fields: [
     {
+      name: 'service',
+      title: 'Service rattaché',
+      type: 'reference',
+      to: [{ type: 'services'}],
+    },
+    {
       name: 'nomrubrique',
-      title: 'Nom du rubrique',
+      title: 'Nom de la rubrique',
       type: 'string',
     },
     {

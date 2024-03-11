@@ -21,8 +21,8 @@ const Print = () => {
         }
 
         defineCliConfig.fetch(
-            `*[_type == 'services' && nomcat == 'Print']{
-                nomcat,
+            `*[_type == 'services' && nomservice == 'Print']{
+                nomservice,
                 descriptionservice,
                 phraseaccroche,
                 pictoservice {
@@ -33,7 +33,7 @@ const Print = () => {
             .catch(error => console.error("Erreur lors de la récupération des données", error));
 
         defineCliConfig.fetch(
-            `*[_type == 'rubrique'] | order(nomrubrique asc){
+            `*[_type == 'rubrique' && service->nomservice == 'Print'] | order(nomrubrique asc){
                 nomrubrique,
                 format,
                 support,
@@ -65,7 +65,7 @@ const Print = () => {
                 />
             }
             <ArboGauche 
-                title={(dataPrint[0] !== undefined) ? (dataPrint[0].nomcat) : ('')} 
+                title={(dataPrint[0] !== undefined) ? (dataPrint[0].nomservice) : ('')} 
             />
             {
             <AccordeonProjets

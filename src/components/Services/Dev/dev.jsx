@@ -6,29 +6,79 @@ import AccordeonProjets from "../../Page_services/AccordeonProjets"
 import AffichProj from "../../Page_services/AffichProj"
 import BoutonDecouvr from "../../Page_services/BoutonDecouvr"
 import Vignettes from "../../Various/Vignettes"
+import defineCliConfig from "../../../../squarecomcommercial/sanity.cli"
 
 const Dev = () => {
     const [loader, setLoader] = useState(false)
 
+    const [dataPrint, setDataPrint] = useState([])
+    const [accordeonProjets, setAccordeonProjets] = useState([])
+    const [indexImg, setIndexImg] = useState(0)
+
     useEffect(() => {
-        if (Test1){
+        if (Test1) {
             setLoader(true)
         }
+
+        defineCliConfig.fetch(
+            `*[_type == 'services' && nomservice == 'Dév. web et logiciel']{
+                nomservice,
+                descriptionservice,
+                phraseaccroche,
+                pictoservice {
+                    asset->{url}
+                  }
+              }`
+        ).then((data) => { setDataPrint(data)})
+            .catch(error => console.error("Erreur lors de la récupération des données", error));
+
+        defineCliConfig.fetch(
+            `*[_type == 'rubrique' && service->nomservice == 'Dév. web et logiciel'] | order(nomrubrique asc){
+                nomrubrique,
+                format,
+                support,
+                tarif,
+                imgillu{
+                  asset->{url}
+                },
+                altimgillu
+              }`
+        ).then((data) => { 
+            setAccordeonProjets(data); 
+            console.log(data)
+        })
+            .catch(error => console.error("Erreur lors de la récupération des données", error));
+
     }, [])
+
+    const onChange = (numberIndex) => {
+        setIndexImg(numberIndex)
+    }
 
     return (
         <div>
             {!loader ? <p>Loading en cours</p> :
-            <Presentation 
-                service_titre = 'Un outil indispensable et accessible par tous !'
-                service_desc = 'Votre site Internet est indispensable pour que vos clients et prospects puissent vous voir sous votre meilleur jour. Il vous permet d&#39;améliorer votre visibilité et ainsi de vous faire gagner en notoriété. Le résultat direct est une croissance notable. Votre site vous permet également de comprendre les besoins de vos clients en créant avec eux une interaction. Ils seront alors convaincus et vous accorderont toute leur confiance. Suite à cela, SQUARECOM intégrera à votre stratégie les outils d&#39;aide à la conversion nécessaires pour améliorer les ventes et trouver un bon équilibre entre contenu mis en ligne et résultats générés. Deux types de site pour particuliers et professionnels: Sites vitrines, Sites commerciaux'
-                service_picto = '/src/medias/picto-site.png'
+                <Presentation
+                    service_titre={(dataPrint[0] !== undefined) ? (dataPrint[0].phraseaccroche) : ('')}
+                    service_desc={(dataPrint[0] !== undefined) ? (dataPrint[0].descriptionservice[0].children[0].text) : ('')}
+                    service_picto={`${dataPrint[0] !== undefined ? dataPrint[0].pictoservice.asset.url : ''}`}
+                />
+            }
+            <ArboGauche 
+                title={(dataPrint[0] !== undefined) ? (dataPrint[0].nomservice) : ('')} 
+            />
+            {
+            <AccordeonProjets
+                thumbnail_proj={accordeonProjets[indexImg]?.imgillu?.asset?.url || ''}
+                alt={accordeonProjets[0]?.altimgillu || ''}
+                rubriques={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.nomrubrique)}
+                formats={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.format)}
+                supports={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.support)}
+                change={onChange}
             />
             }
-            <ArboGauche title = 'Print'/>
-            <AccordeonProjets thumbnail_proj='src/medias/betam.jpg' alt='site internet betam' rubrique1='Site e-commerce' rubrique2='Site vitrine' rubrique3='Logiciel tiers'  rubrique4=''/>
             <AffichProj />
-            <BoutonDecouvr/>
+            <BoutonDecouvr />
             <Vignettes />
         </div>
     )

@@ -1,34 +1,84 @@
-import React, { useEffect, useState } from "react";
-import Presentation from "../../Page_services/Presentation";
-import ArboGauche from "../../Various/ArboGauche";
-import Test1 from "../../../medias/picto-referencement.png"
+import React, { useEffect, useState } from "react"
+import Presentation from "../../Page_services/Presentation"
+import ArboGauche from "../../Various/ArboGauche"
+import Test1 from "../../../medias/picto-print.png"
 import AccordeonProjets from "../../Page_services/AccordeonProjets"
 import AffichProj from "../../Page_services/AffichProj"
 import BoutonDecouvr from "../../Page_services/BoutonDecouvr"
-import Vignettes from "../../Various/Vignettes";
+import Vignettes from "../../Various/Vignettes"
+import defineCliConfig from "../../../../squarecomcommercial/sanity.cli"
 
 const Motion = () => {
     const [loader, setLoader] = useState(false)
 
+    const [dataPrint, setDataPrint] = useState([])
+    const [accordeonProjets, setAccordeonProjets] = useState([])
+    const [indexImg, setIndexImg] = useState(0)
+
     useEffect(() => {
-        if (Test1){
+        if (Test1) {
             setLoader(true)
         }
+
+        defineCliConfig.fetch(
+            `*[_type == 'services' && nomservice == 'Motion design']{
+                nomservice,
+                descriptionservice,
+                phraseaccroche,
+                pictoservice {
+                    asset->{url}
+                  }
+              }`
+        ).then((data) => { setDataPrint(data)})
+            .catch(error => console.error("Erreur lors de la récupération des données", error));
+
+        defineCliConfig.fetch(
+            `*[_type == 'rubrique' && service->nomservice == 'Motion design'] | order(nomrubrique asc){
+                nomrubrique,
+                format,
+                support,
+                tarif,
+                imgillu{
+                  asset->{url}
+                },
+                altimgillu
+              }`
+        ).then((data) => { 
+            setAccordeonProjets(data); 
+            console.log(data)
+        })
+            .catch(error => console.error("Erreur lors de la récupération des données", error));
+
     }, [])
+
+    const onChange = (numberIndex) => {
+        setIndexImg(numberIndex)
+    }
 
     return (
         <div>
             {!loader ? <p>Loading en cours</p> :
-            <Presentation 
-                service_titre = 'Dynamisez votre contenu !'
-                service_desc = 'Que ce soit pour des besoins internes ou externes : une bonne vidéo rime avec un bon moment. Vous souhaitez proposer votre produit au plus grand nombre ? La vidéo est un des moyens les plus efficaces à l&#39;heure de l&#39;effervescence des réseaux sociaux. Vous souhaitez présenter un projet en interne et vous avez besoin d&#39;un support qui puisse être visionné lors de conférences ou de réunions ? La vidéo vous permet également d&#39;inviter votre spectateur de manière agréable et ludique.'
-                service_picto = '/src/medias/picto-referencement.png'
+                <Presentation
+                    service_titre={(dataPrint[0] !== undefined) ? (dataPrint[0].phraseaccroche) : ('')}
+                    service_desc={(dataPrint[0] !== undefined) ? (dataPrint[0].descriptionservice[0].children[0].text) : ('')}
+                    service_picto={`${dataPrint[0] !== undefined ? dataPrint[0].pictoservice.asset.url : ''}`}
+                />
+            }
+            <ArboGauche 
+                title={(dataPrint[0] !== undefined) ? (dataPrint[0].nomservice) : ('')} 
+            />
+            {
+            <AccordeonProjets
+                thumbnail_proj={accordeonProjets[indexImg]?.imgillu?.asset?.url || ''}
+                alt={accordeonProjets[0]?.altimgillu || ''}
+                rubriques={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.nomrubrique)}
+                formats={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.format)}
+                supports={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.support)}
+                change={onChange}
             />
             }
-            <ArboGauche title = 'Motion'/>
-            <AccordeonProjets thumbnail_proj='/src/medias/affiche-estivale-neufchateau.jpg' alt='Affiche estivale' rubrique1= 'Vidéo promotionnelle' rubrique2='Vidéo institutionnelle' rubrique3='Vidéo explicative' rubrique4=''/>
             <AffichProj />
-            <BoutonDecouvr/>
+            <BoutonDecouvr />
             <Vignettes />
         </div>
     )

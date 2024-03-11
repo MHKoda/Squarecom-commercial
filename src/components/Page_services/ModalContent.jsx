@@ -7,8 +7,8 @@ const ModalContent = ({ closeModal }) => {
 
     useEffect(() => {
         defineCliConfig.fetch(
-            `*[_type == 'services' && nomcat == 'Print']{
-                nomcat,
+            `*[_type == 'services' && nomservice == 'Print']{
+                nomservice,
                 descriptionservice,
                 phraseaccroche,
                 pictoservice {

@@ -6,12 +6,12 @@ export default defineType({
   type: 'document',
   fields: [
     {
-      name: 'nomcat',
+      name: 'nomservice',
       title: 'Nom du service',
       type: 'string',
     },
     {
-      name: 'imagecat',
+      name: 'imageservice',
       title: 'Image du service',
       type: 'image',
       options: {
