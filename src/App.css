@@ -502,6 +502,19 @@ input[type="radio"]{
 }
 
 
+/* 
+
+  Archives projets
+
+*/
+
+.archiv-projet ul {
+  display: flex;
+  justify-content: center;
+}
+
+
+
 /* Media-queries - Responsive */
 
 

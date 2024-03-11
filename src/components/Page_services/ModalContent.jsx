@@ -1,28 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import defineCliConfig from "../../../squarecomcommercial/sanity.cli";
 
-const ModalContent = ({ closeModal }) => {
-
-    const [dataModal, setDataModal] = useState([])
-
-    useEffect(() => {
-        defineCliConfig.fetch(
-            `*[_type == 'services' && nomservice == 'Print']{
-                nomservice,
-                descriptionservice,
-                phraseaccroche,
-                pictoservice {
-                    asset->{url}
-                    }
-                }`
-        ).then((datamodal) => { setDataModal(datamodal); console.log(datamodal) })
-            .catch(error => console.error("Erreur lors de la récupération des données", error))
-    }, [])
+const ModalContent = ({ closeModal, data }) => {
 
     function handleKeyDown(event) {
         if (event.key === 'Escape') {
             closeModal()
-            console.log('test')
         }
     }
 
@@ -41,19 +24,7 @@ const ModalContent = ({ closeModal }) => {
                         <ul>
                             <li className='nom-client'>
                                 <h2 className='titre_desc'>Nom du client :</h2>
-                                <p className='content_desc'>Car'DF</p>
-                            </li>
-                            <li className='support-util'>
-                                <h2 className='titre_desc'>Support utilisé :</h2>
-                                <p className='content_desc'>Wordpress</p>
-                            </li>
-                            <li className='format-proj'>
-                                <h2 className='titre_desc'>Format :</h2>
-                                <p className='content_desc'>Site internet</p>
-                            </li>
-                            <li className='method-proj'>
-                                <h2 className='titre_desc'>Méthode d'impression :</h2>
-                                <p className='content_desc'>Ctrl + P</p>
+                                <p className='content_desc'>{data.nomproj}</p>
                             </li>
                         </ul>
                     </div>

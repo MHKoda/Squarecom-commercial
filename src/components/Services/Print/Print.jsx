@@ -44,8 +44,7 @@ const Print = () => {
                 altimgillu
               }`
         ).then((data) => { 
-            setAccordeonProjets(data); 
-            console.log(data)
+            setAccordeonProjets(data);
         })
             .catch(error => console.error("Erreur lors de la récupération des données", error));
 
@@ -75,6 +74,8 @@ const Print = () => {
                 formats={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.format)}
                 supports={accordeonProjets.slice(0, accordeonProjets.length).map(projet => projet.support)}
                 change={onChange}
+                intitule1={'Formats'}
+                intitule2={'Supports'}
             />
             }
             <AffichProj />

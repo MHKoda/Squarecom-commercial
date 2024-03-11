@@ -1,6 +1,6 @@
 import React from "react";
 
-const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports, change}) => {
+const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports, change, intitule1, intitule2}) => {
 
     return (
         <div className="container containerImgAccor">
@@ -29,10 +29,10 @@ const AccordeonProjets = ({ thumbnail_proj, alt, rubriques, formats, supports, c
                         <div className="content">
                             <ul>
                                 <li>
-                                    <p ><strong>Formats : </strong>{formats[index]}</p>
+                                    <p><strong>{intitule1} : </strong>{formats[index]}</p>
                                 </li>
                                 <li>
-                                    <p><strong>Supports : </strong>{supports[index]}</p>
+                                    <p><strong>{intitule2} : </strong>{supports[index]}</p>
                                 </li>
                             </ul>
                         </div>
