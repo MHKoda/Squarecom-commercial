@@ -77,7 +77,9 @@ const Dev = () => {
                 intitule2={'CMS utilisé'}
             />
             }
-            <AffichProj />
+            <AffichProj 
+                service={'Dév. web et logiciel'}
+            />
             <BoutonDecouvr />
             <Vignettes />
         </div>

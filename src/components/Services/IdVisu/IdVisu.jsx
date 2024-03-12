@@ -78,7 +78,7 @@ const Idvisu = () => {
                 intitule2={'Exports'}
             />
             }
-            <AffichProj />
+            {/* <AffichProj /> */}
             <BoutonDecouvr />
             <Vignettes />
         </div>

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import defineCliConfig from "../../../squarecomcommercial/sanity.cli";
+import React from 'react'
 
 const ModalContent = ({ closeModal, data }) => {
 
@@ -11,7 +10,6 @@ const ModalContent = ({ closeModal, data }) => {
 
     return (
         <div className="modal-proj overlay" onClick={closeModal} onKeyDown={handleKeyDown} role="button" tabIndex="0">
-            <input type="text" />
                 <div className='bandeau-top'>
                     <h1 className='h1-modale'>INFORMATIONS COMPL&#201;MENTAIRES</h1>
                     <button className="close-modal">X</button>
@@ -23,11 +21,11 @@ const ModalContent = ({ closeModal, data }) => {
                     <div className="descriptif-proj">
                         <ul>
                             <li>
-                                <h2 className='titre_desc'>Nom du client :</h2>
+                                <h2 className='titre_desc'>Client :</h2>
                                 <p className='content_desc'>{data.client.nomclient}</p>
                             </li>
                             <li>
-                                <h2 className='titre_desc'>Nom du projet :</h2>
+                                <h2 className='titre_desc'>Projet :</h2>
                                 <p className='content_desc'>{data.nomproj}</p>
                             </li>
                         </ul>

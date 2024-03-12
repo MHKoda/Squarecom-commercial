@@ -78,7 +78,9 @@ const Print = () => {
                 intitule2={'Supports'}
             />
             }
-            <AffichProj />
+            <AffichProj 
+                service={'Print'}
+            />
             <BoutonDecouvr />
             <Vignettes />
         </div>

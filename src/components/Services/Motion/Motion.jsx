@@ -78,7 +78,7 @@ const Motion = () => {
                 intitule2={'Info 2'}
             />
             }
-            <AffichProj />
+            {/* <AffichProj /> */}
             <BoutonDecouvr />
             <Vignettes />
         </div>

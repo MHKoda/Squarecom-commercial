@@ -78,7 +78,9 @@ const Goodies = () => {
                 intitule2={'Info 2'}
             />
             }
-            <AffichProj />
+            <AffichProj 
+                service={'Goodies'}
+            />
             <BoutonDecouvr />
             <Vignettes />
         </div>

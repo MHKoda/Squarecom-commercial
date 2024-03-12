@@ -1,53 +1,73 @@
-import React, {useEffect, useState} from "react";
-import ModalContent from "./ModalContent";
-import { createPortal } from "react-dom";
+import React, { useEffect, useState } from "react"
+import ModalContent from "./ModalContent"
+import { createPortal } from "react-dom"
+import defineCliConfig from "../../../squarecomcommercial/sanity.cli"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const AffichProj = () => {
+const AffichProj = ({ service }) => {
 
     const [showModal, setShowModal] = useState(false)
 
-    // const [dataPrint, setDataPrint] = useState([])
+    const [dataProjets, setDataProjets] = useState([])
+    
+    const [selectedProjet, setSelectedProjet] = useState(null);
+    const handleOpenModal = (projet) => {
+        setSelectedProjet(projet);
+    };
 
-    if(showModal){
+    if (showModal) {
         document.body.classList.add('active-modale')
-    }else{
+    } else {
         document.body.classList.remove('active-modale')
     }
 
-    // useEffect(() => {
-    //     let query = `*[_type == 'projet'`;
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      };
 
-    //     if (rubrique) {
-    //         query += ` && rubrique->nomrubrique == "${rubrique}"`
-    //     }
+    useEffect(() => {
+        let query = `*[_type == 'projet'`;
 
-    //     query += `] | order(nomproj asc)  {
-    //         nomproj,
-    //         client->{nomclient},
-    //         rubrique->{nomrubrique},
-    //         imageproj {
-    //           asset->{url}
-    //         },
-    //         altimage,
-    //         slugproj{current}
-    //     }`;
+        if (service) {
+            query += ` && service->nomservice == "${service}"`;
+        }
 
-    //     defineCliConfig.fetch(query)
-    //         .then((data) => {
-    //             setDataPrint(data);
-    //         })
-    //         .catch(error => console.error("Erreur lors de la récupération des données", error))
-    // }, []);
+        query += `] | order(nomproj asc)  {
+                nomproj,
+                client->{nomclient},
+                rubrique->{nomrubrique},
+                imageproj {
+                  asset->{url}
+                },
+                altimage,
+                slugproj{current}
+            }`
+
+        defineCliConfig.fetch(query)
+            .then((data) => {
+                setDataProjets(data)
+            })
+    }, [])
 
     return (
         <div className="container containerArticle">
-            <ul>
-                <li>
-                    <img src="/src/medias/carte-de-visite-tridon-carre.jpg" alt="carte de visite tridon" />
-                    <button onClick={() => setShowModal(true)} className="afficher-projet"><span>Afficher le projet</span></button>
-                </li>
-            </ul>
-            {showModal && createPortal(<ModalContent closeModal={() => setShowModal(false)} />, document.body)}
+            <Slider className="conteneru-slider" {...settings}>
+                {dataProjets.map((projet, index) => (
+                    <div key={`list-${index}`} className="element-liste">
+                        <img src={projet.imageproj.asset.url} alt={projet.altimage} />
+                        <button onClick={() => { handleOpenModal(projet); setShowModal(true) }} className="afficher-projet">
+                            <span>{projet.nomproj}</span>
+                        </button>
+                        {showModal && createPortal(<ModalContent data={selectedProjet} closeModal={() => setShowModal(false)} />, document.body)}
+                    </div>
+                ))}
+            </Slider>
         </div>
     )
 }
