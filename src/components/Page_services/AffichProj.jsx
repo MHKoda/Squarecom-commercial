@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react"
 import ModalContent from "./ModalContent"
 import { createPortal } from "react-dom"
 import defineCliConfig from "../../../squarecomcommercial/sanity.cli"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const AffichProj = ({ service }) => {
 
@@ -14,7 +14,7 @@ const AffichProj = ({ service }) => {
     
     const [selectedProjet, setSelectedProjet] = useState(null);
     const handleOpenModal = (projet) => {
-        setSelectedProjet(projet);
+        setSelectedProjet(projet)
     };
 
     if (showModal) {
@@ -29,13 +29,13 @@ const AffichProj = ({ service }) => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1
-      };
+      }
 
     useEffect(() => {
         let query = `*[_type == 'projet'`;
 
         if (service) {
-            query += ` && service->nomservice == "${service}"`;
+            query += ` && service->nomservice == "${service}"`
         }
 
         query += `] | order(nomproj asc)  {
