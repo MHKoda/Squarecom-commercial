@@ -21,7 +21,7 @@ const Motion = () => {
         }
 
         defineCliConfig.fetch(
-            `*[_type == 'services' && nomservice == 'Motion design']{
+            `*[_type == 'services' && nomservice == 'Vidéo']{
                 nomservice,
                 descriptionservice,
                 phraseaccroche,
@@ -33,7 +33,7 @@ const Motion = () => {
             .catch(error => console.error("Erreur lors de la récupération des données", error));
 
         defineCliConfig.fetch(
-            `*[_type == 'rubrique' && service->nomservice == 'Motion design'] | order(nomrubrique asc){
+            `*[_type == 'rubrique' && service->nomservice == 'Vidéo'] | order(nomrubrique asc){
                 nomrubrique,
                 format,
                 support,
@@ -78,7 +78,7 @@ const Motion = () => {
                 intitule2={'Info 2'}
             />
             }
-            {/* <AffichProj /> */}
+            <AffichProj />
             <BoutonDecouvr />
             <Vignettes />
         </div>
