@@ -611,7 +611,7 @@ select {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* PARTIE VIGNETTES A REVOIR ! */
+
 
   .absolute-texture {
     top: 20vh;
@@ -623,11 +623,19 @@ select {
   }
 
   .thumbnail-proj-modal {
-    width: 100%;
+    width: 75%;
+    max-width: none;
+    margin: 0 auto;
   }
 
   .modale-content {
-    flex-wrap: nowrap;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .descriptif-proj {
+    padding: 5% 0 0 0;
+    width: auto;
   }
 
   .element-liste img {
